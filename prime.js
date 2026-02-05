@@ -1,12 +1,22 @@
-arr=[1,3,17,8,15,27]
-arr1=[]
+arr=[9,3,17,8,15,27]
 
-for (i=0;i<arr.length;i++){
-    for(j=0;j<arr[i];j++){
-    if(arr[i]%j!=0){
-        arr1.push(arr[i])
-        break;
-    }
-    }
+function isPrime(num){
+     bool=false
+     
+        for(i=2;i<num;i++){
+           if (num%i!=0){
+            arr.push(num)
+            brak
+           }
+        }
+        console.log(arr);
+       
 }
-console.log(arr1)
+arr =[]
+for (i=0;i<arr.length;i++){
+   isPrime(arr[i])
+   
+
+}
+
+
