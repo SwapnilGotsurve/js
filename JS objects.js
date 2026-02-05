@@ -52,3 +52,12 @@ console.log(Math.random()); // Random number between 0 and 1
 console.log(Math.max(1, 5, 3, 9, 2)); // Max → 9
 console.log(Math.min(1, 5, 3, 9, 2)); // Min → 1
 console.log(Math.pow(2, 3)); // 2 to the power of 3 → 8
+
+// ===================boolean object==================
+let boolTrue = new Boolean(true);   
+let boolFalse = new Boolean(false);
+
+console.log(boolTrue.valueOf());  // true
+console.log(boolFalse.valueOf()); // false
+// Note: Boolean objects are rarely used in practice    
+// as primitive boolean values are preferred.
