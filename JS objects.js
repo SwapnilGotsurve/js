@@ -39,3 +39,16 @@ arr.unshift(0); // Add 0 to the beginning
 console.log(arr);
 arr.shift(); // Remove first element
 console.log(arr);
+
+
+// ===============math object==================
+console.log(Math.PI); // Pi → 3.141592653589793
+console.log(Math.round(4.7)); // Round → 5
+console.log(Math.floor(4.7)); // Floor → 4
+console.log(Math.ceil(4.3));    // Ceil → 5
+console.log(Math.sqrt(16)); // Square root → 4
+console.log(Math.abs(-10)); // Absolute value → 10      
+console.log(Math.random()); // Random number between 0 and 1
+console.log(Math.max(1, 5, 3, 9, 2)); // Max → 9
+console.log(Math.min(1, 5, 3, 9, 2)); // Min → 1
+console.log(Math.pow(2, 3)); // 2 to the power of 3 → 8
