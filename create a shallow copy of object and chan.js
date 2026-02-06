@@ -4,6 +4,8 @@ let originalObj = {
     age: 30,
     city: "New York"
 };
+
+
 // Create a shallow copy using Object.assign
 let shallowCopyObj = Object.assign({}, originalObj);
 // Change a property in the shallow copy
