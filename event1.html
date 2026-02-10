@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+  </head>
+  <body>
+    <!-- mouseclick , over , out  -->
+
+    <div
+      style="width: 50px; height: 50px; border: 2px dotted black"
+      onmouseout="out()"
+      onclick="click1()"
+      onmousemove="move()"
+      ondblclick="doubleClick1()"
+    ></div>
+    <br />
+
+    <input type="text" onkeydown="down()"  onkeyup="up()" />
+    <div id="msg"></div>
+    <div id="demo"></div>
+  </body>
+  <script>
+    function out() {
+      document.getElementById("msg").innerHTML = "mouse out ";
+    }
+    function click1() {
+      document.getElementById("msg").innerHTML = "mouse click ";
+    }
+    function move() {
+      document.getElementById("msg").innerHTML = "mouse hover ";
+    }
+    function down() {
+      document.getElementById("msg").innerHTML = "key pressed";
+    }
+    function up() {
+      document.getElementById("msg").innerHTML = "key released";
+    }
+     function doubleClick1() {
+      document.getElementById("msg").innerHTML = "double click!";
+    }
+  </script>
+</html>

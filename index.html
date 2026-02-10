@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onclick="down();" onkeyup="up()">
+    <div id="demo"></div>
+</body>
+<script>
+    function down(){
+        document.getElementById("demo").innerHTML=  "key pressed";
+    }
+    function up(){
+        document.getElementById("demo").innerHTML=  "key released" ;
+    }
+</script>
+</html>

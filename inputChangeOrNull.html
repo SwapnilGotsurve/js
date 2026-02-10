@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debug Input</title>
+</head>
+<body>
+
+    <form onsubmit="return false;">
+        <input type="text" id="inp" oninput="fun()">
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="demo"></div>
+
+<script>
+    function fun() {
+        let val = document.getElementById("inp").value;
+
+        if (val === "") {
+            document.getElementById("demo").innerHTML = "input empty";
+        } else {
+            document.getElementById("demo").innerHTML = "input changed";
+        }
+    }
+</script>
+
+</body>
+</html> -->
+
+<!-- ================================================= 2nd way ================================================ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debug Input</title>
+</head>
+<body>
+
+    <form >
+        <input type="text" id="inp" onchange="fun(this)">
+        <!-- <input type="submit" value="Submit"> -->
+    </form>
+
+    <div id="demo"></div>
+
+<script>
+    function fun(ele) {
+        // let val = document.getElementById("inp").value;
+
+        if (ele.value != "") {
+            document.getElementById("demo").innerHTML = "input changed";
+        } else {
+            document.getElementById("demo").innerHTML = "input empty";
+        }
+    }
+</script>
+
+</body>
+</html>
