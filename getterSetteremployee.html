@@ -1,0 +1,91 @@
+<!-- get the name , salary and bonus of employee from html page. print the final salary employee in the html page. do this program using getter and setter in js .  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary Calculator</title>
+</head>
+<body>
+    <h1>Employee Salary Calculator</h1>
+    <form id="employeeForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required><br><br>
+
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" placeholder="Enter salary" required><br><br>
+
+        <label for="bonus">Bonus:</label>
+        <input type="number" id="bonus" placeholder="Enter bonus" required><br><br>
+
+        <button type="button" id="calculateBtn" >Calculate Final Salary</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        class Employee {
+            constructor(name, salary, bonus) {
+                this._name = name;
+                this._salary = salary;
+                this._bonus = bonus;
+            }
+
+
+            // Setter for name
+            set name(value) {
+                this._name = value;
+            }
+              // Setter for salary
+            set salary(value) {
+                this._salary = parseFloat(value);
+            }
+                // Setter for bonus
+            set bonus(value) {
+                this._bonus = parseFloat(value);
+            }
+
+                 // Getter for name
+            get name() {
+                return this._name;
+            }
+
+            // Getter for salary
+            get salary() {
+                return this._salary;
+            }
+
+            // Getter for bonus
+            get bonus() {
+                return this._bonus;
+            }
+
+          
+            // Getter for final salary
+            get finalSalary() {
+                return this._salary + this._bonus;
+            }
+        }
+
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const salary = document.getElementById('salary').value;
+            const bonus = document.getElementById('bonus').value;
+
+            if (name && salary && bonus) {
+                const employee = new Employee(name, parseFloat(salary), parseFloat(bonus));
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = `
+                    <h2>Employee Details</h2>
+                    <p>Name: ${employee.name}</p>
+                    <p>Salary: ${employee.salary}</p>
+                    <p>Bonus: ${employee.bonus}</p>
+                    <p>Final Salary: ${employee.finalSalary}</p>
+                `;
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
