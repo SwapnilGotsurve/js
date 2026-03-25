@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""  id="myForm">
+        <input type="text" id="name">
+        <button >count char</button>
+
+        <p id="res"></p>
+    </form>
+</body>
+<script>
+       document.getElementById("myForm").addEventListener("submit", function(e) {
+        e.preventDefault(); 
+     let name = document.getElementById('name').value ;
+     let count = 0 ;
+     for(let i=0;i<=name.length;i++){
+        count = count + 1;
+     }  
+     document.getElementById('res').innerHTML = ` character count is ${count} `;
+     
+    })
+</script>
+</html>

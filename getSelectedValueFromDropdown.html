@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="fruits" id="fruits" onclick="fun()">
+        <option value="apple">apple</option>
+        <option value="grapes">grapes</option>
+        <option value="pineapple">pineapple</option>
+    </select>
+</body>
+
+<script>
+    function fun(){
+
+        let val =  document.getElementById('fruits')
+        let fruit = val.value;
+        console.log(fruit);
+    }
+  
+</script>
+</html>

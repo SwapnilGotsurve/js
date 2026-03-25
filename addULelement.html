@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="myForm" >
+
+        <input type="text" id="name" >
+        <button >Add Element</button> 
+
+        <ul id="ul">
+
+        </ul>
+    </form>
+</body>
+<script>
+    let names = []; // Array to store names outside the event listener
+
+    document.getElementById("myForm").addEventListener("submit", function(e) {
+        e.preventDefault(); 
+        const name = document.getElementById('name').value.trim(); // Get and trim the input value
+        if (name) { // Only add if the input is not empty
+            names.push(name); // Add to array
+            document.getElementById('name').value = ''; // Clear the input
+            updateList(); // Update the list display
+        }
+    });
+
+    function updateList() {
+        const ul = document.getElementById('ul');
+        ul.innerHTML = ''; // Clear the list
+        names.forEach(name => {
+            const li = document.createElement('li'); // Create a new li element
+            li.textContent = name; // Set the text
+            ul.appendChild(li); // Append to ul
+        });
+    }
+</script>
+</html>

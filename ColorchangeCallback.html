@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   
+    <button onclick="func()">Change Color</button>
+</body>
+<script>
+    function func(){
+    
+        changebg("yellow", done)
+    }
+
+    function changebg(value, callback){
+        document.body.style.backgroundColor = `${value}`;
+        callback();
+
+    }
+    function done(){
+        alert("color is changed ")
+    }
+</script>
+</html>
