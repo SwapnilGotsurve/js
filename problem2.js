@@ -1,6 +1,6 @@
 let myPromise = new Promise(function(resolve, reject) {
     let n = 5
-    if (n > 0) {
+    if (n > 10) {
         resolve("Promise resolved successfully!")
     }
     else {
@@ -11,6 +11,8 @@ let myPromise = new Promise(function(resolve, reject) {
 
 myPromise.then(function(successMessage) {
     console.log(successMessage)
-}).catch(function(errorMessage) {
+})
+
+.catch(function(errorMessage) {
     console.log(errorMessage)
 })
